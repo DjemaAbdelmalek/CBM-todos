@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap");
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../views';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-playwire-2: "Playwrite RO", cursive;
+    --font-playwire: "Playwrite AU SA", cursive;
+    --color-background: #fffff3;
+    --color-subtitle: #ccccc0;
+    --color-title: #333333;
+    --color-card: linear-gradient(to right, #f7cac9, #5c5c5c);
+    --color-task: #f5f5e9;
+    --color-nav: #ccccc0;
+}
+
+@layer theme {
+    .dark {
+        --color-nav: #374357;
+        --color-task: #1f2b3e;
+        --color-card: linear-gradient(to right, #4d648d, #acc2ef);
+        --color-background: #0f1c2e;
+        --color-title: #e0e0e0;
+        --color-subtitle: #ccccc0;
+    }
+
+    .mobile-menu {
+        z-index: 9999 !important;
+    }
+}
